@@ -12,20 +12,21 @@ ENCODING 'UTF-8'
 CONNECTION LIMIT -1;
 
 CREATE TABLE tb_contato(
-idContato SERIAL,
+id SERIAL,
 nome VARCHAR(60) CONSTRAINT nn_tb_contato_nome NOT NULL,
 email VARCHAR(60) CONSTRAINT nn_tb_contato_email NOT NULL,
-CONSTRAINT pk_tb_contato_idContato PRIMARY KEY(idContato)
+telefone VARCHAR(15) CONSTRAINT nn_tb_contato_telefone NOT NULL,
+CONSTRAINT pk_tb_contato_idContato PRIMARY KEY(id)
 );
 ```
 
 #### Framework ASP.NET MVC
-- Para melhor entendimento sugiro assistir esse vídeo: 
-https://www.youtube.com/watch?v=7xRQ5Jw-nxo
-
 - Framework para desenvolvimento de aplicações web.
 - Faz uso do padrão de arquitetura de desenvolvimento de software MVC.
 - Funciona sobre o .NET Framework.
+
+- Para melhor entendimento sugiro assistir esse vídeo: 
+https://www.youtube.com/watch?v=7xRQ5Jw-nxo
 
 #### No padrão MVC há três elementos principais:
 - O **model**, responsável por representar as entidades da lógica de negócios da aplicação;
@@ -52,5 +53,5 @@ Nas classes Controller desenvolvemos grande parte das validações e regras de n
 - Gerenciador de pacotes para a plataforma .NET
 - Possui integração ao Visual Studio.
 
-#### Criando a string de conexão
+#### String de conexão
 - https://www.connectionstrings.com/npgsql/
