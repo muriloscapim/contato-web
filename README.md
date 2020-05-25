@@ -37,6 +37,7 @@ https://www.youtube.com/watch?v=7xRQ5Jw-nxo
 O Model realiza o acesso ao banco de dados e o Controller atua como intermediário entre a View (páginas HTML) e o model.
 Nas classes Controller desenvolvemos grande parte das validações e regras de negócio do sistema.
 
+![fbdevgd30_mvc_001_en](https://user-images.githubusercontent.com/56240254/82829502-d0434880-9e89-11ea-8177-90a62c90e6d9.png)
 
 #### Biblioteca ADO.NET
 - ADO.NET é a biblioteca (conjunto de classes) utilizada pela Microsoft para acesso a bases de dados na plataforma .NET
