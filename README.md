@@ -16,7 +16,7 @@ id SERIAL,
 nome VARCHAR(60) CONSTRAINT nn_tb_contato_nome NOT NULL,
 email VARCHAR(60) CONSTRAINT nn_tb_contato_email NOT NULL,
 telefone VARCHAR(15) CONSTRAINT nn_tb_contato_telefone NOT NULL,
-CONSTRAINT pk_tb_contato_idContato PRIMARY KEY(id)
+CONSTRAINT pk_tb_contato_id PRIMARY KEY(id)
 );
 ```
 
