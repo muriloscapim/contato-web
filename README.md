@@ -19,6 +19,10 @@ telefone VARCHAR(15) CONSTRAINT nn_tb_contato_telefone NOT NULL,
 CONSTRAINT pk_tb_contato_id PRIMARY KEY(id)
 );
 ```
+#### Altere a string de conexão no arquivo Web.config para as configurações do seu banco
+```c#
+connectionString="Server=127.0.0.1;Port=5432;Database=myDataBase;User Id=myUsername;Password=myPassword";
+```
 
 #### Framework ASP.NET MVC
 - Framework para desenvolvimento de aplicações web.
