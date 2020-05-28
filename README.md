@@ -43,6 +43,8 @@ Nas classes Controller desenvolvemos grande parte das validações e regras de n
 
 ![fbdevgd30_mvc_001_en](https://user-images.githubusercontent.com/56240254/82829502-d0434880-9e89-11ea-8177-90a62c90e6d9.png)
 
+![laravel-introducao](https://user-images.githubusercontent.com/56240254/83198254-3263ae00-a115-11ea-9c2e-949944fee939.jpg)
+
 #### Biblioteca ADO.NET
 - ADO.NET é a biblioteca (conjunto de classes) utilizada pela Microsoft para acesso a bases de dados na plataforma .NET
 - Facilita o acesso das aplicações à bases de dados de diversos tipos.
