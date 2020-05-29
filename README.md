@@ -19,6 +19,10 @@ telefone VARCHAR(15) CONSTRAINT nn_tb_contato_telefone NOT NULL,
 CONSTRAINT pk_tb_contato_id PRIMARY KEY(id)
 );
 ```
+#### Altere a string de conexão no arquivo Web.config para as configurações do seu banco
+```c#
+connectionString="Server=127.0.0.1;Port=5432;Database=myDataBase;User Id=myUsername;Password=myPassword";
+```
 
 #### Framework ASP.NET MVC
 - Framework para desenvolvimento de aplicações web.
@@ -38,6 +42,8 @@ O Model realiza o acesso ao banco de dados e o Controller atua como intermediár
 Nas classes Controller desenvolvemos grande parte das validações e regras de negócio do sistema.
 
 ![fbdevgd30_mvc_001_en](https://user-images.githubusercontent.com/56240254/82829502-d0434880-9e89-11ea-8177-90a62c90e6d9.png)
+
+![laravel-introducao](https://user-images.githubusercontent.com/56240254/83198254-3263ae00-a115-11ea-9c2e-949944fee939.jpg)
 
 #### Biblioteca ADO.NET
 - ADO.NET é a biblioteca (conjunto de classes) utilizada pela Microsoft para acesso a bases de dados na plataforma .NET
