@@ -23,6 +23,8 @@ CONSTRAINT pk_tb_contato_id PRIMARY KEY(id)
 ```c#
 connectionString="Server=127.0.0.1;Port=5432;Database=myDataBase;User Id=myUsername;Password=myPassword";
 ```
+#### CRUD
+- Create, Read, Update e Delete.
 
 #### Framework ASP.NET MVC
 - Framework para desenvolvimento de aplicações web.

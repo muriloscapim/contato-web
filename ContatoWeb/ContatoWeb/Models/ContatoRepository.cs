@@ -53,7 +53,36 @@ namespace ContatoWeb.Models
 
         public override Contato GetById(int id)
         {
-            throw new NotImplementedException();
+            using (var conn = new NpgsqlConnection(StringConn))
+            {
+                string sql = "SELECT * FROM tb_contato WHERE id=@id";
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                Contato c = null;
+                try
+                {
+                    conn.Open();
+                    using (var reader = cmd.ExecuteReader
+                        (CommandBehavior.CloseConnection))
+                    {
+                        if(reader.HasRows)
+                        {
+                            if(reader.Read())
+                            {
+                                c = new Contato();
+                                c.Id = (int)reader["id"];
+                                c.Nome = reader["nome"].ToString();
+                                c.Email = reader["email"].ToString();
+                                c.Telefone = reader["telefone"].ToString();
+                            }
+                        }
+                    }
+                } catch (Exception e)
+                {
+                    throw e;
+                }
+                return c;
+            }
         }
 
         public override void Save(Contato entity)
@@ -81,7 +110,24 @@ namespace ContatoWeb.Models
 
         public override void Update(Contato entity)
         {
-            throw new NotImplementedException();
+            using (var conn = new NpgsqlConnection(StringConn))
+            {
+                string sql = "UPDATE tb_contato SET nome=@nome, email=@email, telefone=@telefone " +
+                    "WHERE id=@id";
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", entity.Id);
+                cmd.Parameters.AddWithValue("@nome", entity.Nome);
+                cmd.Parameters.AddWithValue("@email", entity.Email);
+                cmd.Parameters.AddWithValue("@telefone", entity.Telefone);
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                } catch (Exception e)
+                {
+                    throw e;
+                }
+            }
         }
     }
 }

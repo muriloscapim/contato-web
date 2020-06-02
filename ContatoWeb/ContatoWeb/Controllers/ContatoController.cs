@@ -28,5 +28,23 @@ namespace ContatoWeb.Controllers
             repository.Save(contato);
             return RedirectToAction("Index");
         }
+
+        public ActionResult Edit(int id)
+        {
+            var contato = repository.GetById(id);
+
+            if (contato == null)
+            {
+                return HttpNotFound();
+            }
+            return View(contato);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Contato contato)
+        {
+            repository.Update(contato);
+            return RedirectToAction("Index");
+        }
     }
 }
